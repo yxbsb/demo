@@ -66,6 +66,8 @@ public class AreaController {
     private Map<String, Object> addArea(@RequestBody Area area)
             throws JsonParseException, JsonMappingException, IOException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
+
+
         // 添加区域信息
         modelMap.put("success", areaService.addArea(area));
         return modelMap;
