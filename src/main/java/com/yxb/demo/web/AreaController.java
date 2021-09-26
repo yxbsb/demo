@@ -67,7 +67,6 @@ public class AreaController {
             throws JsonParseException, JsonMappingException, IOException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
-
         // 添加区域信息
         modelMap.put("success", areaService.addArea(area));
         return modelMap;
@@ -95,6 +94,7 @@ public class AreaController {
     @RequestMapping(value = "/removearea", method = RequestMethod.GET)
     private Map<String, Object> removeArea(Integer areaId) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
+
         // 修改区域信息
         modelMap.put("success", areaService.deleteArea(areaId));
         return modelMap;
